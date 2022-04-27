@@ -3,7 +3,10 @@ liczba_figur = int(input())
 
 suma_pol=0
 for i in range(liczba_figur):
-  dane_figury = input().split(" ") 
+  dane_figury = input().split(" ")
+  if len(dane_figury) > 3:
+    print("Błąd: można podać maksymalnie 3 liczby")
+    break 
   if len(dane_figury)==3:
         p = (float(dane_figury[0]) + float(dane_figury[1]) + float(dane_figury[2])) / 2 #połowa obwodu figury
         pole_trojkata = math.sqrt(p*(p - float(dane_figury[0]))*(p - float(dane_figury[1]))*(p - float(dane_figury[2])))
